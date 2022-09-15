@@ -1,17 +1,19 @@
 ///////////////////////////////
 // DEPENDENCIES
 ////////////////////////////////
+
 const mongoose = require('mongoose');
-require("dotenv").config();
+require('dotenv').config()
 
-console.log(process.env.MONGODB_URI)
-const connectionString =process.env.MONGODB_URI
-console.log(typeof connectionString)
+const MONGODB_URI = process.env.MONGODB_URI
+console.log(MONGODB_URI)
+
+///////////////////////////////
+// DATABASE CONNECTION
+////////////////////////////////
+mongoose.connect(MONGODB_URI, (msg)=>console.log(`${msg}`))
 
 
-// pull PORT from .env, give default value of 4000
-
-mongoose.connect(connectionString)
 
 ///////////////////////////////
 // DATABASE CONNECTION

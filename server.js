@@ -23,5 +23,5 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(4000,()=>{
-    console.log(`i cant hear youuuuu on ${PORT}`)
+    console.log(PORT)
 })

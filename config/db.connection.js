@@ -4,6 +4,7 @@
 const mongoose = require('mongoose');
 require("dotenv").config();
 const connectionString =process.env.MONGODB_URI
+console.log(connectionString)
 
 // pull PORT from .env, give default value of 4000
 

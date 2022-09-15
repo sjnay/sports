@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const PORT = process.env.PORT || 4000
+const PORT = 4000
 const cors = require("cors");
 const morgan = require("morgan");
 require('./config/db.connection');
@@ -19,9 +19,9 @@ app.use('/teams', teamsController);
 
 //routes
 app.get('/',(req,res)=>{
-    res.send(`ay ay captain`)
+    res.send("ay ay captain")
 })
 
-app.listen(PORT || 4000,()=>{
+app.listen(4000,()=>{
     console.log(`i cant hear youuuuu on ${PORT}`)
 })

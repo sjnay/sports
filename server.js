@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const PORT = 4000
+const PORT = process.env.PORT
 const cors = require("cors");
 const morgan = require("morgan");
 require('./config/db.connection');
@@ -22,6 +22,6 @@ app.get('/',(req,res)=>{
     res.send("ay ay captain")
 })
 
-app.listen(4000,()=>{
+app.listen(PORT,()=>{
     console.log(PORT)
 })
